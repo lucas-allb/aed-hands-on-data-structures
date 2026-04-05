@@ -40,13 +40,10 @@ class Array(ABC):
         Deve lançar ValueError se o valor não existir.
         """
         raise NotImplementedError
+    def tes():
+        return 1
 
     @abstractmethod
     def insert(self, index: int, value: int) -> None:
-        """
-        Insere um elemento no índice especificado,
-        deslocando os elementos à direita.
-
-        Deve lançar IndexError se o índice for inválido.
-        """
+        
         raise NotImplementedError

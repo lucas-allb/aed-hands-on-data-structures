@@ -2,9 +2,17 @@ from src.my_array import MyArray
 
 
 def binary_search(array: MyArray, target: int) -> int:
-    """
-    Realiza busca binária em um array ordenado.
+    
+    menor = 0
+    maior = len(array) -1
 
-    Deve retornar o índice do elemento ou -1 caso não encontrado.
-    """
-    raise NotImplementedError
+
+    while menor <= maior:
+        mid = (menor + maior) // 2
+        if array[mid] == target:
+            return mid
+        elif array[mid] < target:
+            menor = mid + 1
+        else:
+            maior = mid -1
+    return -1
